@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>htec-task_angular</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <!-- <script src="../node_modules/angular/angular.js"></script> -->
+
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css">
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!--endbuild-->
+
+</head>
+
+<body ng-controller="myController">
+  {{milan}}
+  <div class="container">
+    <div class="wrapper">
+      <div class="header-top">
+        <div class="search">
+          <input type="text" name="search" id="search" ng-model="serach" placeholder="serach...">
+        </div>
+        <!-- <div class="switch-conteiner">
+          <div class="switch is-transitioned">
+            <div class="on">Grid</div>
+            <div class="off">List</div>
+            <div class="handle"></div>
+          </div>
+        </div> -->
+      <div>
+        select view: <select ng-model="drugariView">
+          <option value="test.html">table</option>
+          <option value="test1.html">list</option>
+        </select>
+      </div>
+      </div>
+      <div ng-include="drugariView"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--build:js js/main.min.js -->
+  <script src="js/lib/a-library.js"></script>
+  <script src="js/lib/another-library.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
