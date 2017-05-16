@@ -10,7 +10,46 @@ myApp.controller("myController", ["$scope","$http", function($scope, $http) {
         $scope.drugari = drugari.data;
         console.log(drugari.data);
     });
-
-
-
 }]);
+
+// 3
+
+function capitalizeFirstLetter(str) {
+    return str.toLowerCase()
+              .split(' ')
+        .map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);
+        })
+         .join(' ');
+}
+
+alert(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se kkkkkk"));
+
+
+function mySplit(str, separator) {
+  var res = [];
+  var temp = "";
+  for (var i = 0; i < str.length; i++) {
+       if(str[i] === separator ) {
+         res.push(temp);
+         temp = "";
+       } else {
+         temp+= str[i];
+       }
+  }
+
+  if (temp !== ""){
+     res.push(temp);
+  }
+  return res;
+}
+
+function capitalizeFirstLetter(str) {
+    return mySplit(str.toLowerCase(), " ")
+        .map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);
+        }).join(' ');
+}
+
+alert(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se krajjjjj"));
+alert(mySplit("ovo je test funkcija ", " "));

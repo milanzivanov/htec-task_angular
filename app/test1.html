@@ -2,8 +2,10 @@
     <p>list</p>
     <ul>
       <div class="box" box ng-repeat="drugar in drugari | filter:serach">
-        <a href="#">{{drugar.name}} - {{drugar.title}}</a>
-        <img ng-src="{{drugar.images}}">
+        <div class="box-title">
+          <a href="#">{{drugar.name}} - {{drugar.title}}</a>
+          <img ng-src="{{drugar.images}}">
+        </div>
         <div class="info">
           <p>{{drugar.info}}</p>
         </div>

@@ -142,15 +142,33 @@ img {
     display: block;
     width: 100%;
     padding: 0;
-    li {
-      list-style: none;
-      a {
-        display: block;
-        text-decoration: none;
-      }
-      .info {
+    .box {
+        width: 100%;
         float: left;
-      }
+        display: block;
+        background: aqua;
+        margin: 10px 0;
+        .box-title {
+          width: 25%;
+          float: left;
+          a {
+            display: block;
+            width: 100%;
+            background: yellow;
+            text-decoration: none;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+        }
+        .info {
+          float: left;
+          width: 75%;
+          background: indianred;
+        }
     }
+
   }
 }

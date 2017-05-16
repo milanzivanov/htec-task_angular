@@ -121,10 +121,24 @@ img {
   display: block;
   width: 100%;
   padding: 0; }
-  .list ul li {
-    list-style: none; }
-    .list ul li a {
-      display: block;
-      text-decoration: none; }
-    .list ul li .info {
+  .list ul .box {
+    width: 100%;
+    float: left;
+    display: block;
+    background: aqua;
+    margin: 10px 0; }
+    .list ul .box .box-title {
+      width: 25%;
       float: left; }
+      .list ul .box .box-title a {
+        display: block;
+        width: 100%;
+        background: yellow;
+        text-decoration: none; }
+      .list ul .box .box-title img {
+        max-width: 100%;
+        height: auto; }
+    .list ul .box .info {
+      float: left;
+      width: 75%;
+      background: indianred; }
