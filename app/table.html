@@ -1,0 +1,15 @@
+<div class=table>
+    <h3>table</h3>
+    <ul>
+      <div class="box" box ng-repeat="drugar in drugari | filter:serach">
+        <div class="box-title">
+          <a href="#">{{drugar.name}} - {{drugar.title}}</a>
+          <img ng-src="{{drugar.images}}">
+        </div>
+        <div class="info">
+          <p>{{drugar.info}}</p>
+        </div>
+      </div>
+    </ul>
+</div>
+<!-- <img ng-src="http://kingofwallpapers.com/picture/picture-008.jpg" /> -->

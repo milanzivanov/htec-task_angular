@@ -2,7 +2,7 @@ var myApp = angular.module("myApp", []);
 
 myApp.controller("myController", ["$scope","$http", function($scope, $http) {
     $scope.milan = "zadatak koji je trebalo uraditi za htec";
-    $scope.drugariView = "test.html";
+    $scope.drugariView = "table.html";
 
     // $http and json
     // console.log(angular.toJson($scope.drugari));
@@ -23,7 +23,7 @@ function capitalizeFirstLetter(str) {
          .join(' ');
 }
 
-alert(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se kkkkkk"));
+console.log(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se kkkkkk"));
 
 
 function mySplit(str, separator) {
@@ -51,5 +51,5 @@ function capitalizeFirstLetter(str) {
         }).join(' ');
 }
 
-alert(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se krajjjjj"));
-alert(mySplit("ovo je test funkcija ", " "));
+console.log(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se krajjjjj"));
+console.log(mySplit("ovo je test funkcija ", " "));

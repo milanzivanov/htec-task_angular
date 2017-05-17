@@ -1,19 +1,43 @@
 body {
     padding: 0;
     margin: 0;
+    font-size: sans-serif;
 }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .container {
     width: 100%;
     float: left;
     font-family: sans-serif;
     background: #e0f2f1;
-    //height: 100vh;
     border-top: 5px solid #009688;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1111;
 }
 
 .wrapper {
     max-width: 960px;
     margin: auto;
+}
+
+.wrapper-body {
+  width: 100%;
+  float: left;
+  top: 155px;
+  position: relative;
+  z-index: 111;
+  background: orange;
+  overflow-y: auto;
+  height: calc(100vh - 213px);
 }
 
 .header-top {
@@ -41,99 +65,57 @@ body {
     transition: width 0.4s ease-in-out;
 }
 
-.switch-conteiner {
-    order: 1;
-}
-
-.header-top .switch.is-transitioned {
-  background: #009688;
-}
-.header-top .switch.is-transitioned .handle {
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
-}
-
-.header-top .switch {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100px;
-    text-align: center;
-    border-radius: 200px;
-    background: #ef5350;
-    height: 50px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: background ease-in-out 0.5s;
-    transition: background ease-in-out 0.5s;
-}
-
-.header-top .switch > div {
-    line-height: 50px;
-    color: white;
-    font-weight: 600;
-}
-
-.header-top .on {
-    width: 50%;
-}
-
-.header-top .switch > div {
-    line-height: 50px;
-    color: white;
-    font-weight: 600;
-}
-
-.header-top .off {
-    width: 50%;
-}
-
-.header-top .switch > div {
-    line-height: 50px;
-    color: white;
-    font-weight: 600;
-}
-
-.header-top .handle {
-    cursor: pointer;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    position: absolute;
-    background: #fff;
-    top: 2px;
-    left: 2px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    -webkit-transition: -webkit-transform ease-in-out 0.5s;
-    transition: -webkit-transform ease-in-out 0.5s;
-    transition: transform ease-in-out 0.5s;
-    transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+.select-box {
+  color: #777;
+  select {
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
 }
 
 .table {
+  p {
+    font-size: 25px;
+  }
   width: 100%;
    ul {
     display: block;
     width: 100%;
     padding: 0;
     background: red;
-    li {
-      width: 25%;
-      list-style: none;
-      float: left;
-      a {
-        display: block;
-        text-decoration: none;
-      }
-      img {
+    .box {
+        width: 25%;
         float: left;
-      }
+        display: block;
+        background: aqua;
+        margin: 10px 0;
+        .box-title {
+          width: 100%;
+          float: left;
+          a {
+            display: block;
+            width: 100%;
+            background: yellow;
+            text-decoration: none;
+            padding: 5px;
+          }
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        .info {
+          float: left;
+          width: 100%;
+          background: indianred;
+          padding: 5px;
+          p {
+            font-size: 15px;
+            line-height: 150%;
+            padding: 5px;
+          }
+        }
     }
   }
 }
@@ -156,19 +138,34 @@ img {
             width: 100%;
             background: yellow;
             text-decoration: none;
+            padding: 5px;
           }
           img {
             max-width: 100%;
             height: auto;
           }
-
         }
         .info {
           float: left;
           width: 75%;
           background: indianred;
+          padding: 5px;
+          p {
+            margin: 0;
+          }
         }
     }
-
   }
+}
+
+footer.footer {
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 9999;
+    text-align: center;
+    padding: 20px 0;
+    background: blueviolet;
+    position: fixed;
+    bottom: 0;
 }
