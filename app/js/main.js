@@ -77,3 +77,22 @@ function firstLetterToUppercase(text) {
 }
 
 console.log(firstLetterToUppercase(text))
+
+var text = "lorem ipsum dolor sit amet consectetur adipiscing elit";
+
+function firstLetterToUppercase(text) {
+  var newText = "";
+  for (var i = 0; i < text.length; i++) {
+    var letter = text[i];
+    if (letter === " ") {
+      var position = i++;
+      letter = " " + text[position].toUpperCase();
+    } else if (i === 0) {
+      letter = text[i].toUpperCase();
+    }
+    newText += letter;
+  }
+  return newText;
+}
+
+console.log(firstLetterToUppercase(text))
