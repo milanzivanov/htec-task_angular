@@ -4,7 +4,6 @@ body {
     font-size: sans-serif;
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
 }
@@ -22,6 +21,8 @@ html {
     position: fixed;
     top: 0;
     z-index: 1111;
+    border-bottom: 1px solid #AAA;
+    box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .wrapper {
@@ -35,7 +36,6 @@ html {
   top: 155px;
   position: relative;
   z-index: 111;
-  background: orange;
   overflow-y: auto;
   height: calc(100vh - 213px);
 }
@@ -77,28 +77,28 @@ html {
 .table {
   p {
     font-size: 25px;
+    font-family: sans-serif;
   }
   width: 100%;
    ul {
     display: block;
     width: 100%;
     padding: 0;
-    background: red;
     .box {
-        width: 25%;
+        width: calc(25% - 4px);
         float: left;
         display: block;
-        background: aqua;
-        margin: 10px 0;
+        margin: 10px 1px;
         .box-title {
           width: 100%;
           float: left;
           a {
             display: block;
             width: 100%;
-            background: yellow;
             text-decoration: none;
             padding: 5px;
+            color: indianred;
+            font-family: sans-serif;
           }
           img {
             max-width: 100%;
@@ -108,7 +108,6 @@ html {
         .info {
           float: left;
           width: 100%;
-          background: indianred;
           padding: 5px;
           p {
             font-size: 15px;
@@ -128,7 +127,6 @@ html {
         width: 100%;
         float: left;
         display: block;
-        background: aqua;
         margin: 10px 0;
         .box-title {
           width: 25%;
@@ -136,9 +134,10 @@ html {
           a {
             display: block;
             width: 100%;
-            background: yellow;
             text-decoration: none;
             padding: 5px;
+            color: indianred;
+            font-family: sans-serif;
           }
           img {
             max-width: 100%;
@@ -148,7 +147,6 @@ html {
         .info {
           float: left;
           width: 75%;
-          background: indianred;
           padding: 5px;
           p {
             margin: 0;
@@ -165,7 +163,9 @@ footer.footer {
     z-index: 9999;
     text-align: center;
     padding: 20px 0;
-    background: blueviolet;
+    background: #e0f2f1;
     position: fixed;
     bottom: 0;
+    font-family: sans-serif;
+    font-size: 20px;
 }

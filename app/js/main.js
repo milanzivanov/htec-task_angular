@@ -12,19 +12,20 @@ myApp.controller("myController", ["$scope","$http", function($scope, $http) {
     });
 }]);
 
-// 3
+// with s.split()
 
-function capitalizeFirstLetter(str) {
-    return str.toLowerCase()
-              .split(' ')
-        .map(function(word) {
-            return word[0].toUpperCase() + word.substr(1);
-        })
-         .join(' ');
-}
+// function capitalizeFirstLetter(str) {
+//     return str.toLowerCase()
+//               .split(' ')
+//         .map(function(word) {
+//             return word[0].toUpperCase() + word.substr(1);
+//         })
+//          .join(' ');
+// }
+//
+// console.log(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se kkkkkk"));
 
-console.log(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se kkkkkk"));
-
+// function s.split()
 
 function mySplit(str, separator) {
   var res = [];
@@ -43,13 +44,36 @@ function mySplit(str, separator) {
   }
   return res;
 }
+function toPascalCase(word) {
+    return word[0].toUpperCase() + word.substr(1);
+}
 
 function capitalizeFirstLetter(str) {
     return mySplit(str.toLowerCase(), " ")
-        .map(function(word) {
-            return word[0].toUpperCase() + word.substr(1);
-        }).join(' ');
+        .map(toPascalCase)
+        .join(' ');
 }
 
 console.log(capitalizeFirstLetter("Neka dugacka recenica i ne vidi joj se krajjjjj"));
 console.log(mySplit("ovo je test funkcija ", " "));
+
+
+// vesna
+
+var text = "lorem ipsum dolor sit amet consectetur adipiscing elit";
+
+function firstLetterToUppercase(text) {
+  var newText = "";
+  for (var i = 0; i < text.length; i++) {
+    var letter = text[i];
+    if (letter === " ") {
+      letter = " " + text[++i].toUpperCase();
+    } else if (i === 0) {
+      letter = text[i].toUpperCase();
+    }
+    newText += letter;
+  }
+  return newText;
+}
+
+console.log(firstLetterToUppercase(text))
